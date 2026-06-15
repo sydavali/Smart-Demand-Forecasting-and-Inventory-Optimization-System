@@ -178,3 +178,5 @@ streamlit run app.py
 AI & ML Engineering Student
 
 Focused on Data Science, Machine Learning, and Intelligent Decision Support Systems.
+
+LinkedIn: https://www.linkedin.com/in/sydavali-shaik/
