@@ -2,125 +2,151 @@
 
 ## Project Overview
 
-Smart Demand Forecasting and Inventory Optimization System is an AI-powered web application designed to forecast future product demand and provide intelligent inventory management recommendations.
+The Smart Demand Forecasting and Inventory Optimization System is a machine learning-powered decision support application designed to predict product demand and optimize inventory management. The system leverages historical sales data, pricing information, inventory levels, promotional activities, weather conditions, and regional factors to forecast future demand and generate intelligent inventory recommendations.
 
-The system uses Machine Learning techniques to analyze historical sales patterns, inventory levels, pricing strategies, promotions, seasonality, weather conditions, and other influencing factors. Based on the predicted demand, the system generates inventory insights, stock status analysis, and reorder recommendations to help organizations reduce stock shortages and overstock situations.
-
----
-
-## Project Architecture
-
-![Architecture Diagram](architecture.png)
+The project combines Machine Learning, Data Analytics, and Interactive Visualization through a modern Streamlit dashboard to assist businesses in minimizing stockouts, reducing overstock situations, and improving inventory planning efficiency.
 
 ---
 
 ## Key Features
 
-* Demand Forecasting using Random Forest Machine Learning Model
-* Inventory Intelligence Dashboard
-* Reorder Quantity Recommendation
-* Stock Status Classification
-* Feature Importance Analysis
-* Interactive Streamlit Dashboard
-* Real-Time User Input Simulation
-* Advanced Analytics Visualization
+- Demand Forecasting using Machine Learning
+- Inventory Intelligence Dashboard
+- Reorder Quantity Recommendations
+- Stock Risk Assessment
+- Advanced Feature Importance Analysis
+- Interactive Streamlit Web Application
+- Real-Time Parameter Simulation
+- Business-Oriented Visual Analytics
+
+---
+
+## System Architecture
+
+![Architecture](images/architecture.png)
+
+---
+
+## Dashboard Screenshots
+
+### Dashboard Home
+
+![Dashboard Home](images/dashboard_home.png)
+
+---
+
+### Demand Prediction & Inventory Optimization
+
+![Prediction Results](images/prediction_and_results.png)
+
+---
+
+### Advanced Analytics
+
+![Analytics](images/analytics.png)
+
+---
+
+### About Project
+
+![About Project](images/about_project.png)
+
+---
+
+## Machine Learning Workflow
+
+1. Data Collection
+2. Data Preprocessing
+3. Feature Engineering
+4. Train-Test Split
+5. Model Training
+   - Random Forest Regressor
+   - XGBoost Regressor
+6. Model Evaluation
+7. Best Model Selection
+8. Demand Prediction
+9. Inventory Optimization
+10. Analytics and Reporting
 
 ---
 
 ## Technology Stack
 
 ### Programming Language
-
-* Python
+- Python
 
 ### Machine Learning
-
-* Scikit-Learn
-* Random Forest Regressor
-* XGBoost
+- Scikit-Learn
+- XGBoost
 
 ### Data Processing
-
-* Pandas
-* NumPy
+- Pandas
+- NumPy
 
 ### Visualization
+- Plotly
+- Matplotlib
 
-* Plotly
-
-### Web Application
-
-* Streamlit
-
----
-
-## System Workflow
-
-Dataset
-→ Data Preprocessing
-→ Feature Engineering
-→ Train/Test Split
-→ Model Training
-→ Model Evaluation
-→ Final Random Forest Model
-→ Streamlit Dashboard
-→ Demand Prediction
-→ Inventory Intelligence
-→ Reorder Recommendation
-→ Analytics & Visualization
+### Web Framework
+- Streamlit
 
 ---
 
-## Dashboard Screenshots
+## Model Performance
 
-### Main Dashboard
+The project evaluates multiple regression models using:
 
-[Insert Screenshot]
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+- MAPE (Mean Absolute Percentage Error)
+- R² Score
 
-### Inventory Intelligence Dashboard
-
-[Insert Screenshot]
-
-### Advanced Analytics
-
-[Insert Screenshot]
+The Random Forest model was selected as the final forecasting model based on overall predictive performance.
 
 ---
 
-## Business Impact
+## Project Structure
 
-The proposed system helps retailers and inventory managers:
+```text
+Smart-Demand-Forecasting-and-Inventory-Optimization-System
+│
+├── app.py
+├── rf_model.pkl
+├── xgboost_demand_model.pkl
+├── feature_columns.pkl
+├── label_encoders.pkl
+├── demand_forecasting.csv
+├── preprocessed_demand_forecasting_data.csv
+├── requirements.txt
+├── README.md
+│
+├── images
+│   ├── architecture.png
+│   ├── dashboard_home.png
+│   ├── prediction_and_results.png
+│   ├── analytics.png
+│   └── about_project.png
+│
+├── analysis.ipynb
+├── machine_learning.ipynb
+└── visualization.ipynb
+```
 
-* Reduce stock shortages
-* Minimize excess inventory
-* Improve inventory planning
-* Support data-driven decision making
-* Enhance operational efficiency
-* Improve demand forecasting accuracy
-
----
-
-## Future Enhancements
-
-* Supplier Management Module
-* Lead Time Prediction
-* ABC Inventory Analysis
-* Automated Purchase Order Generation
-* Multi-Product Forecasting
-* Cloud Deployment
-* Real-Time Data Integration
-
----
-
-## Installation & Execution
+## Installation
 
 ### Clone Repository
 
 ```bash
-git clone <repository-link>
+git clone https://github.com/sydavali/Smart-Demand-Forecasting-and-Inventory-Optimization-System.git
 ```
 
-### Install Requirements
+### Navigate to Project Folder
+
+```bash
+cd Smart-Demand-Forecasting-and-Inventory-Optimization-System
+```
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -134,10 +160,21 @@ streamlit run app.py
 
 ---
 
+## Future Enhancements
+
+- Real-Time Data Integration
+- Cloud Deployment
+- Automated Inventory Alerts
+- Multi-Warehouse Support
+- Deep Learning Forecasting Models
+- ERP Integration
+
+---
+
 ## Author
 
 **Shaik Sydavali**
 
-B.E. Artificial Intelligence & Machine Learning
+AI & ML Engineering Student
 
-Smart Demand Forecasting and Inventory Optimization System
+Focused on Data Science, Machine Learning, and Intelligent Decision Support Systems.
