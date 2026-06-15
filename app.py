@@ -433,7 +433,7 @@ if page == "Forecasting Dashboard":
 elif page == "Advanced Analytics":
     st.markdown("""
         <div class="terminal-header">
-            <h1>📊 ADVANCED MODEL ANALYTICS</h1>
+            <h1>ADVANCED MODEL ANALYTICS</h1>
             <p>Evaluate machine learning feature importance weights distributions and relative dataset entropies splits contextually.</p>
         </div>
     """, unsafe_allow_html=True)
@@ -448,6 +448,7 @@ elif page == "Advanced Analytics":
         
         top_features = importance_df.head(10).sort_values(by='Importance', ascending=True)
 
+        # Corrected Plotly Config - Stripped automatic labels to remove 'undefined' text
         fig = px.bar(
             top_features, x='Importance', y='Feature', orientation='h',
             labels={'Importance': 'Split Weight Gain Metric', 'Feature': 'Dataset Parameter Feature'},
@@ -456,16 +457,26 @@ elif page == "Advanced Analytics":
         )
         
         fig.update_layout(
-            paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)',
-            font_family="Inter", font_color="#94A3B8", title_font_color="#FFFFFF",
+            paper_bgcolor='rgba(0,0,0,0)', 
+            plot_bgcolor='rgba(0,0,0,0)',
+            font_family="Inter", 
+            font_color="#94A3B8", 
+            title_font_color="#FFFFFF",
             xaxis=dict(showgrid=True, gridcolor='#334155', title_font_color='#FFFFFF'),
             yaxis=dict(showgrid=False, title_font_color='#FFFFFF'),
-            margin=dict(l=20, r=20, t=25, b=20), coloraxis_showscale=False, height=450
+            margin=dict(l=20, r=20, t=10, b=20), # Tightened top margin
+            coloraxis_showscale=False, 
+            showlegend=False, # Explicitly removes legends
+            height=450
         )
+        
+        # Explicitly forces color-axis scale/legend logic off entirely
+        fig.update_coloraxes(showscale=False)
         
         chart_view, raw_view = st.columns([2, 1])
         with chart_view:
-            st.plotly_chart(fig, use_container_width=True)
+            # Added config to turn off floating plotly toolbar icons on hover
+            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
         with raw_view:
             st.markdown("<p style='font-family:\"JetBrains Mono\"; font-weight:600; font-size:0.95rem; color:#38BDF8;'>📋 Top Feature Coefficients Registry Log</p>", unsafe_allow_html=True)
             st.dataframe(importance_df.head(10), use_container_width=True, hide_index=True)
