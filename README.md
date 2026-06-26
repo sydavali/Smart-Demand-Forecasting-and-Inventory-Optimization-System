@@ -52,6 +52,22 @@ The project combines Machine Learning, Data Analytics, and Interactive Visualiza
 ![About Project](images/about_project.png)
 
 ---
+## 🎥 Project Demonstration
+
+A complete demonstration of the **Smart Demand Forecasting and Inventory Optimization System** is available in the video below.
+
+The demo showcases:
+
+- 📊 Interactive Streamlit Dashboard
+- 📦 Product Demand Prediction
+- 📈 Inventory Intelligence Dashboard
+- 🔄 Automated Reorder Recommendation
+- ⚠️ Stock Risk Assessment
+- 📉 Feature Importance Analysis
+- 🧠 End-to-End Machine Learning Workflow
+
+▶️ **Watch the Demo Video:**  
+https://www.linkedin.com/posts/sydavali-shaik_machinelearning-datascience-artificialintelligence-ugcPost-7476299641727229952-oguJ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFjHaF4BcMqUs7wrTlpVCwglR3t4ZUAh5Us
 
 ## Machine Learning Workflow
 
